@@ -7,10 +7,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">レポート <span class="sr-only">(current)</span></a>
+                    <router-link class="nav-link" :to="{ name: 'report-page' }">レポート <span class="sr-only">(current)</span></router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">記録</a>
+                    <router-link class="nav-link" :to="{ name: 'form-page' }">記録</router-link>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>

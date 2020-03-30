@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-header">{{ greeting }}</div>
                     <div class="card-body">
-                        I'm an example component.
+                        Form Component
                     </div>
                 </div>
             </div>
