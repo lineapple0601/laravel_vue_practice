@@ -1,11 +1,11 @@
 <template>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-12">
                 <div class="card">
-                    <div class="card-header">{{ greeting }}</div>
+                    <div class="card-header">{{ responseArr.title }}</div>
                     <div class="card-body">
-                        Form Component
+                        {{ responseArr.contents }}
                     </div>
                 </div>
             </div>
@@ -16,8 +16,15 @@
     module.exports = {
         data: function() {
             return {
-                greeting: 'hello'
+                responseArr: {}
             }
+        },
+        mounted() {
+            const self = this;
+            const url = '/pages/form';
+            axios.post(url).then(function(response){
+                self.responseArr = response.data;
+            });
         }
     }
 </script>

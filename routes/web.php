@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// ページの表示処理を行う
+Route::prefix('pages')->group(function () {
+    Route::any('report', 'PageController@report');
+    Route::any('form', 'PageController@form');
+});
