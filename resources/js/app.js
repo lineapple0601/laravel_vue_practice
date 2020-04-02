@@ -6,6 +6,8 @@ import VueRouter from 'vue-router'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 Vue.use(VueRouter)
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -20,16 +22,22 @@ Vue.component('navigation-bar', NavVar)
 const router = new VueRouter({
     mode: 'history',
     routes: [
+        // Indexページ
         {
-            path: '/',
+            path: '/report',
             name: 'report-page',
             component: ReportPage
         },
+        // フォームページ
         {
-            path: 'form',
+            path: '/form',
             name: 'form-page',
             component: FormPage
-        }
+        },
+        {
+            path: '*',
+            redirect: '/report'
+        },
     ]
 });
 

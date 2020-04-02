@@ -1,24 +1,14 @@
 <template>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="#" style="font-weight:bold;">自己管理ツール</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <router-link class="nav-link" :to="{ name: 'report-page' }">レポート <span class="sr-only">(current)</span></router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="{ name: 'form-page' }">記録</router-link>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div>
+  <b-navbar toggleable="lg" type="dark" variant="info">
+    <b-navbar-brand href="#">自己管理ツール</b-navbar-brand>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav>
+        <b-nav-item href="#"><router-link class="nav-link" :to="{ name: 'report-page' }" style="padding:0;">レポート</router-link></b-nav-item>
+        <b-nav-item href="#"><router-link class="nav-link" :to="{ name: 'form-page' }" style="padding:0;">記録</router-link></b-nav-item>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+</div>
 </template>

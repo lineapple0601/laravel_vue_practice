@@ -13,8 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/{extraUrl?}', function ($extraUrl = null) {
+    return view('welcome', [
+        'extraUrl' => $extraUrl
+    ]);
 });
 
 // ページの表示処理を行う
