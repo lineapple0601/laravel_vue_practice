@@ -5,6 +5,8 @@
 - Vue.jsのライブラリVue-routerを利用すること（https://router.vuejs.org/）
 - UIはbootstrap-vueで構成する
 
+# 起動手順
+
 ## 必要なパッケージ
 
 ※　下記パッケージをインストールし、コマンドをaliasとして指定すること
